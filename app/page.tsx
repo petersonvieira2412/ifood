@@ -1,9 +1,7 @@
+import Header from "@/app/_components/header";
+
 const Home = () => {
-  return (
-    <div className="bg-red-500 px-4 text-white">
-      <h1>Hello to Ifood!</h1>
-    </div>
-  );
+  return <Header />;
 };
 
 export default Home;
