@@ -1,7 +1,10 @@
 import Header from "@/app/_components/header";
 import Search from "@/app/_components/search";
-import CategoryList from "@/app/_components/category/category-list";
+import CategoryList from "@/app/_components/categories/category-list";
 import Image from "next/image";
+import ProductList from "@/app/_components/products/product-list";
+import { Button } from "@/app/_components/ui/button";
+import { ChevronRightIcon } from "lucide-react";
 
 const Home = () => {
   return (
@@ -10,6 +13,7 @@ const Home = () => {
       <div className="px-5 pt-6">
         <Search />
       </div>
+
       <div className="px-5 pt-6">
         <CategoryList />
       </div>
@@ -24,6 +28,20 @@ const Home = () => {
           sizes="100vw"
           quality={100}
         />
+      </div>
+
+      <div className="space-y-4 pt-6">
+        <div className="flex items-center justify-between px-5">
+          <h2 className="font-semibold">Pedidos Recomendados</h2>
+          <Button
+            variant="ghost"
+            className="h-fit p-0 text-primary hover:bg-transparent"
+          >
+            Ver Todos
+            <ChevronRightIcon size={16} />
+          </Button>
+        </div>
+        <ProductList />
       </div>
     </>
   );
